@@ -50,3 +50,23 @@ constraint uqcelular3 UNIQUE(Celular)
 )
 
 
+create table Disciplina(
+Id tinytint identity not null
+Nome varchar(20) 
+Data date
+Status varchar(7) constraint dfStatus default 'Aberta'
+Plano de Ensino varchar(50)
+Carga Horaria tinyint
+Competencias varchar(100)
+Habilidades varchar(100)
+Ementa varchar(100)
+Conteudo Programatico varchar(100)
+Bibliografia Básica varchar(100)
+Bibliografia Complementar varchar(100)
+Percentual Pratico tinyint
+Percentual Teórico tinyint
+IdCoordenador tinyint not null
+constraint pkDisciplina primary key(Id)
+constraint fkIdCoordenador foreign key IdCoordenador references Coordenador(IdCoordenador)
+constraint uqnome unique(Nome)
+)
