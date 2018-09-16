@@ -87,13 +87,13 @@ Metodologia varchar(255) null,
 Recursos varchar(255) null,
 CriterioAvaliacao varchar(255) null,
 PlanoDeAulas varchar(255) null,
-constraint pkDisciplinaOfertada primary key (Id)
-constraint fkIdCoordenadorDisciplicaOfertada foreign key IdCoordenador references Coordenador(Id)
-constraint fkIdDisciplina foreign key IdDisciplina references Disciplina(Id)
-constraint fkIdCurso foreign key IdCurso references Curso(Id)
-constraint ckAno CHECK (Ano between 1900 and 2100)
-constraint ckSemestre CHECK (Semestre between 1 and 2)
-constraint Turma CHECK (Turma LIKE '[A-Z]' or Turma LIKE '[a-z]')
+constraint pkDisciplinaOfertada primary key (Id),
+constraint fkIdCoordenadorDisciplicaOfertada foreign key IdCoordenador references Coordenador(Id),
+constraint fkIdDisciplina foreign key IdDisciplina references Disciplina(Id),
+constraint fkIdCurso foreign key IdCurso references Curso(Id),
+constraint ckAno CHECK (Ano between 1900 and 2100),
+constraint ckSemestre CHECK (Semestre between 1 and 2),
+constraint Turma CHECK (Turma LIKE '[A-Z]' or Turma LIKE '[a-z]'),
 constraint fkIdProfessor foreign key IdProfessor references Professor(Id)
 )
 
