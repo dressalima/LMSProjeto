@@ -74,7 +74,7 @@ constraint uqnome unique(Nome),
 constraint ckstatus CHECK(Status='Aberta' or Status='Fechada'),
 constraint ckcargahoraria CHECK(CargaHoraria=40 or CargaHoraria=80),
 constraint ckpercentualpratico CHECK(PercentualPratico between 0 and 100),
-constraint ckpercentualteorico CHECK(PercentualTeorico between 0 and 100),
+constraint ckpercentualteorico CHECK(PercentualTeorico between 0 and 100)
 
 )
 
