@@ -70,3 +70,37 @@ constraint pkDisciplina primary key(Id)
 constraint fkIdCoordenador foreign key IdCoordenador references Coordenador(IdCoordenador)
 constraint uqnome unique(Nome)
 )
+
+
+create table DisciplinaOfertada(
+Id tinyint identity not null,
+IdCoordenador smallint not null,
+DtInicioMatricula smallint null,
+DtFimMatricula smallint null,
+IdDisciplina tinyint not null,
+IdCurso tinyint not null,
+Ano smallint not null,
+Semestre tinyint not null,
+Turma char(1) not null,
+IdProfessor tinyint null,
+Metodologia varchar(255) null,
+Recursos varchar(255) null,
+CriterioAvaliacao varchar(255) null,
+PlanoDeAulas varchar(255) null,
+constraint pkDisciplinaOfertada primary key (Id)
+constraint fkIdCoordenadorDisciplicaOfertada foreign key IdCoordenador references Coordenador(Id)
+constraint fkIdDisciplina foreign key IdDisciplina references Disciplina(Id)
+constraint fkIdCurso foreign key IdCurso references Curso(Id)
+constraint ckAno CHECK (Ano between 1900 and 2100)
+constraint ckSemestre CHECK (Semestre between 1 and 2)
+constraint Turma CHECK (Turma LIKE '[A-Z]' or Turma LIKE '[a-z]')
+constraint fkIdProfessor foreign key IdProfessor references Professor(Id)
+)
+
+
+create table Curso(
+Id tinyint not null,
+Nome varchar(55) not null,
+constraint uqNomeCurso unique(Curso)
+)
+
