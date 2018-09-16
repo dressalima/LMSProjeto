@@ -140,3 +140,41 @@ constraint ckTipo CHECK(Tipo='Resposta Aberta' or Tipo='Teste'),
 constraint fkIdProf foreign key (IdProfessor) references Professor(Id)
 )
 
+create table AtividadeVinculada
+
+(
+ ID tinyint identity not null
+ ,IdAtividade tinyint not null
+ ,IdProfessor tinyint not null
+ ,IdDisciplinaOfertada tinyint not null
+ ,Rotulo varchar (4) not null
+ ,[Status] varchar (16) not null
+ ,DtInicioRespostas date not null
+ .DtFimRespostas date not null
+ ,constraint pkAtividadeVinculada primary key (ID)
+ ,constraint fkAtividadeVinculadaIdAtividade FOREIGN KEY (IdAtividade) REFERENCES Atividade (Id)
+ ,constraint fkAtividadeVinculadaIdProfessor Foreign key (IdProfessor) References Professor (Id)   
+ ,constraint fkAtividadeVinculadaIdDisciplinaOfertada foreign key (IdDisciplinaOfertada) references Disciplina (Id)  
+ ,constraint ckstatus check (status = 'Disponibilizada' or Status = 'Aberta' or Status ='Fechada' or Status= 'Encerrada' or Status ='Prorrogada' 
+    );
+    
+ Create Table Entrega
+ (
+  ID tinyint Identity not null
+  ,IdAluno tinyint not null 
+  ,IdAtividadeVinculada tinyint not null
+  ,Titulo varchar(30) not null 
+  ,Resposta varchar (40) not null
+  ,DtEntrega date not null constraint dfDtEntrega default (getdate())    
+  ,[Status] varchar (10) not null constraint dfEntregaStatus default 'Entregue'    
+  ,IdProfessor tinyint not null
+  ,Nota decimal not null
+  ,DtAvaliacao date not null
+  ,Obs varchar (50) not null
+  ,constraint pkEntrega primary key (ID)   
+  ,constraint fkEntregaIdAluno foreign key (IdAluno) References Aluno (Id)    
+  ,constraint fkEntregaAtividadeVinculada foreign key (IdAtividadeVinculada) references AtividadeVinculada (Id)   
+  ,constraint fkEntregaIdProfessor foreign key (IdProfessor) references Professor (Id)   
+  ,constraint cknota Check(nota between 0.00 and 10.00)
+   );
+
