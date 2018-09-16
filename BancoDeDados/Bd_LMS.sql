@@ -112,3 +112,31 @@ constraint pkCurso primary key (Id),
 constraint uqNomeCurso unique(Nome)
 )
 
+create table SolicitacaoMatricula(
+ID tinyint not null,
+IdAluno tinyint not null,
+IdDisciplinaOfertada tinyint not null,
+DtSolicitacao datetime not null constraint dfdtsolicitacao DEFAULT getdatetime()
+IdCoordenador tinyint not null,
+Status varchar(15) not null constraint dfStatus DEFAULT 'Solicitada',
+constraint pkSolicitacaoMat primary key(ID),
+constraint fkIdAluno foreign key (IdAluno) references Aluno(Id),
+constraint fkIdDisciplinaOfer foreign key (IdDisciplinaOfertada) references DisciplinaOfertada(Id),
+constraint fkIdCoord foreign key (IdCoordenador) references Coordenador(Id),
+constraint ckstatus CHECK(Status='Solicitada' or Status='Aprovada' or Status='Rejeitada' or Status='Cancelada')
+)
+
+create table Atividade(
+ID tinyint not null,
+Titulo varchar(30) not null,
+Descricao varchar(100) null,
+Conteudo varchar(100) not null,
+Tipo varchar(20) not null,
+Extras varchar(100) null,
+IdProfessor tinyint not null,
+constraint pkAtividade primary key(ID),
+constraint uqTituloAtividade unique(Titulo)
+constraint ckTipo CHECK(Tipo='Resposta Aberta' or Tipo='Teste'),
+constraint fkIdProf foreign key (IdProfessor) references Professor(Id)
+)
+
