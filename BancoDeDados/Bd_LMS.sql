@@ -24,6 +24,8 @@ constraint fkusuario foreign key (Id_usuario) references Usuario(Id),
 constraint uqemail UNIQUE(Email)
 )
 
+select *from Coordenador
+
 create table Aluno(
 Id tinyint identity not null,
 Id_usuario tinyint  not null,
@@ -55,7 +57,7 @@ constraint uqcelular3 UNIQUE(Celular)
 create table Disciplina(
 Id tinyint identity not null,
 Nome varchar(20) not null, 
-Data date not null constraint dfdata DEFAULT getdate(),
+Data date not null constraint dfdata DEFAULT (getdate()),
 Status varchar(7) not null constraint dfStatus default 'Aberta',
 PlanodeEnsino varchar(50) not null,
 CargaHoraria tinyint not null,
@@ -116,26 +118,28 @@ create table SolicitacaoMatricula(
 ID tinyint not null,
 IdAluno tinyint not null,
 IdDisciplinaOfertada tinyint not null,
-DtSolicitacao datetime not null constraint dfdtsolicitacao DEFAULT getdatetime()
-IdCoordenador tinyint not null,
-Status varchar(15) not null constraint dfStatus DEFAULT 'Solicitada',
+DtSolicitacao datetime not null constraint dfdtsolicitacao DEFAULT (getdate()),
+IdCoordenador tinyint,
+Status varchar(10) not null constraint dfStatus2 DEFAULT 'Solicitada',
 constraint pkSolicitacaoMat primary key(ID),
 constraint fkIdAluno foreign key (IdAluno) references Aluno(Id),
 constraint fkIdDisciplinaOfer foreign key (IdDisciplinaOfertada) references DisciplinaOfertada(Id),
 constraint fkIdCoord foreign key (IdCoordenador) references Coordenador(Id),
-constraint ckstatus CHECK(Status='Solicitada' or Status='Aprovada' or Status='Rejeitada' or Status='Cancelada')
+constraint ckstatus0 CHECK(Status='Solicitada' or Status='Aprovada' or Status='Rejeitada' or Status='Cancelada')
 )
+
+
 
 create table Atividade(
 ID tinyint not null,
 Titulo varchar(30) not null,
-Descricao varchar(100) null,
+Descricao varchar(100),
 Conteudo varchar(100) not null,
-Tipo varchar(20) not null,
-Extras varchar(100) null,
+Tipo varchar(15) not null,
+Extras varchar(100),
 IdProfessor tinyint not null,
 constraint pkAtividade primary key(ID),
-constraint uqTituloAtividade unique(Titulo)
+constraint uqTituloAtividade unique(Titulo),
 constraint ckTipo CHECK(Tipo='Resposta Aberta' or Tipo='Teste'),
 constraint fkIdProf foreign key (IdProfessor) references Professor(Id)
 )
@@ -143,38 +147,58 @@ constraint fkIdProf foreign key (IdProfessor) references Professor(Id)
 create table AtividadeVinculada
 
 (
- ID tinyint identity not null
- ,IdAtividade tinyint not null
- ,IdProfessor tinyint not null
- ,IdDisciplinaOfertada tinyint not null
- ,Rotulo varchar (4) not null
- ,[Status] varchar (16) not null
- ,DtInicioRespostas date not null
- .DtFimRespostas date not null
- ,constraint pkAtividadeVinculada primary key (ID)
- ,constraint fkAtividadeVinculadaIdAtividade FOREIGN KEY (IdAtividade) REFERENCES Atividade (Id)
- ,constraint fkAtividadeVinculadaIdProfessor Foreign key (IdProfessor) References Professor (Id)   
- ,constraint fkAtividadeVinculadaIdDisciplinaOfertada foreign key (IdDisciplinaOfertada) references Disciplina (Id)  
- ,constraint ckstatus check (status = 'Disponibilizada' or Status = 'Aberta' or Status ='Fechada' or Status= 'Encerrada' or Status ='Prorrogada' 
-    );
+ ID tinyint identity not null,
+ IdAtividade tinyint not null,
+ IdProfessor tinyint not null,
+ IdDisciplinaOfertada tinyint not null,
+ Rotulo varchar (4) not null,
+ Status varchar (16) not null,
+ DtInicioRespostas date not null,
+ DtFimRespostas date not null,
+ constraint pkAtividadeVinculada primary key (ID),
+ constraint fkAtividadeVinculadaIdAtividade FOREIGN KEY (IdAtividade) REFERENCES Atividade (Id),
+ constraint fkAtividadeVinculadaIdProfessor Foreign key (IdProfessor) References Professor (Id),  
+ constraint fkAtividadeVinculadaIdDisciplinaOfertada foreign key (IdDisciplinaOfertada) references DisciplinaOfertada (Id),  
+ constraint ckstatus1 check (Status = 'Disponibilizada' or Status = 'Aberta' or Status ='Fechada' or Status= 'Encerrada' or Status ='Prorrogada')
+   )
     
  Create Table Entrega
  (
-  ID tinyint Identity not null
-  ,IdAluno tinyint not null 
-  ,IdAtividadeVinculada tinyint not null
-  ,Titulo varchar(30) not null 
-  ,Resposta varchar (40) not null
-  ,DtEntrega date not null constraint dfDtEntrega default (getdate())    
-  ,[Status] varchar (10) not null constraint dfEntregaStatus default 'Entregue'    
-  ,IdProfessor tinyint not null
-  ,Nota decimal not null
-  ,DtAvaliacao date not null
-  ,Obs varchar (50) not null
-  ,constraint pkEntrega primary key (ID)   
-  ,constraint fkEntregaIdAluno foreign key (IdAluno) References Aluno (Id)    
-  ,constraint fkEntregaAtividadeVinculada foreign key (IdAtividadeVinculada) references AtividadeVinculada (Id)   
-  ,constraint fkEntregaIdProfessor foreign key (IdProfessor) references Professor (Id)   
-  ,constraint cknota Check(nota between 0.00 and 10.00)
-   );
+  ID tinyint Identity not null,
+  IdAluno tinyint not null ,
+  IdAtividadeVinculada tinyint not null,
+  Titulo varchar(30) not null, 
+  Resposta varchar (40) not null,
+  DtEntrega date not null constraint dfDtEntrega default (getdate()),    
+  Status varchar (10) not null constraint dfEntregaStatus default 'Entregue',    
+  IdProfessor tinyint,
+  Nota decimal (4,4),
+  DtAvaliacao date,
+  Obs varchar (50),
+  constraint pkEntrega primary key (ID),   
+  constraint fkEntregaIdAluno foreign key (IdAluno) References Aluno (Id),    
+  constraint fkEntregaAtividadeVinculada foreign key (IdAtividadeVinculada) references AtividadeVinculada (ID),   
+  constraint fkEntregaIdProfessor foreign key (IdProfessor) references Professor (Id),   
+  constraint cknota Check(nota between 0.00 and 10.00)
+   )
+
+   create table Mensagem(
+   Id tinyint not null,
+   Id_aluno tinyint not null,
+   Id_professor tinyint not null,
+   Assunto varchar(30) not null,
+   Referencia varchar(20) not null,
+   Conteudo varchar(30) not null,
+   Status char(10) not null constraint dfstatus3 DEFAULT 'Lido',
+   DtEnvio date not null   constraint dfdtenvio DEFAULT (getdate()),
+   DtResposta date,
+   Resposta char(10)
+   constraint pkidmensagemm primary key (Id),
+   constraint fkidalunomensagem foreign key (Id_aluno) references Aluno (Id),
+   constraint fkprofessor foreign key (Id_professor) references Professor (Id),
+   constraint ckstatus2 CHECK(Status='Lido' or Status='Respondido' or Status ='Enviado')
+   )
+ 
+
+
 
