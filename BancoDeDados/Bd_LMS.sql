@@ -24,7 +24,6 @@ constraint fkusuario foreign key (Id_usuario) references Usuario(Id),
 constraint uqemail UNIQUE(Email)
 )
 
-select *from Coordenador
 
 create table Aluno(
 Id tinyint identity not null,
@@ -148,10 +147,10 @@ create table AtividadeVinculada
 
 (
  ID tinyint identity not null,
- IdAtividade tinyint not null,
+ IdAtividade tinyint not null constraint uqIdAtividade unique,
  IdProfessor tinyint not null,
- IdDisciplinaOfertada tinyint not null,
- Rotulo varchar (4) not null,
+ IdDisciplinaOfertada tinyint not null constraint uqIdDisciplinaOfertada unique,
+ Rotulo varchar (4) not null constraint uqrotulo unique,
  Status varchar (16) not null,
  DtInicioRespostas date not null,
  DtFimRespostas date not null,
@@ -172,7 +171,7 @@ create table AtividadeVinculada
   DtEntrega date not null constraint dfDtEntrega default (getdate()),    
   Status varchar (10) not null constraint dfEntregaStatus default 'Entregue',    
   IdProfessor tinyint,
-  Nota decimal (4,4),
+  Nota decimal (4,2),
   DtAvaliacao date,
   Obs varchar (50),
   constraint pkEntrega primary key (ID),   
