@@ -1,10 +1,21 @@
 body{
     font-family: "open sans", open serif;
+    background-color: #E6E6E6
+}
+
+.aga1{
+    font-family: "EurostileBold", "Trebuchet MS", sans-serif;
+    text-transform: uppercase; 
+    font-size: 30px;
+    color: #4F4F4F;
 }
 
 .cabecalho{
-    background-color: #1E90FF;
+    background-color: #008B8B;
     height: 80px;
+
+    background-image: linear-gradient(to bottom, #008B8B, #0B615E);
+
     
 }
 
@@ -19,16 +30,140 @@ body{
     width: 150px;
 }
 
+/* INÍCIO NAVBAR MENU */
+.smart{
+    font-family: fantasy;
+    font-size: 30px;
+    color: #04B4AE;
+    position: absolute;
+    margin-top: 140px;
+}
 
-.navbar{
-    float: left;
-    background-color: #cccccc;
+.smartclass a{
+    color: #6E6E6E;
+}
+
+.smartclass a:link, a:visited, a:active{
+    text-decoration: none;
+}
+    
+.smartclass a:hover {
+	text-decoration: underline; 
+	color:#000;  
+    }
+
+ul.smartclass li {
+    list-style:none;	
+    display:inline;
+}
+
+.smartclass{
+    position: absolute;
+    background-color: #E6E6E6;
     width: 200px;
-    height: 400px;
+    height: 150px;
+    margin-top: 195px;
     margin-left: 20px;
-    padding-left: 10px;
+    padding: 0px;
     padding-right: 10px;
     font-size: 18px;
     text-align: left;
     line-height: 30px;
+    color: white;
 }
+
+ul.navbar{
+    margin-top: -10px;
+    float: left;
+    background-color: #E6E6E6;
+    width: 200px;
+    height: 150px;
+    margin-left: 20px;
+    padding: 0px;
+    padding-right: 10px;
+    font-size: 18px;
+    text-align: left;
+    line-height: 30px;
+    color: white;
+}
+
+
+ul.navbar li {
+	list-style:none;	
+	display:inline;
+    }
+    
+/*ul.submenu li a:hover{
+    color:royalblue;
+    display: hidden;
+}
+*/
+
+.navbar a{
+    color: #6E6E6E;
+}
+
+.navbar a:link, a:visited, a:active {
+    text-decoration:none;
+	}
+.navbar a:hover {
+	text-decoration: underline; 
+	color:#000;  
+    }
+    
+
+
+/*FIM NAVBAR*/
+
+/*MURAL INÍCIO*/
+.mural{
+    background-color: #E6E6E6;
+    width: 700px;
+    height: 450px;
+    float: left;
+    margin-left: 80px;
+    margin-top: -30px;
+}
+
+.recados{
+    background-color:#fff;
+    width: 690px;
+    height: 200px;
+    padding-left: 10px;
+
+    /*Borda arredondada*/
+
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+
+    /*Fim borda arredondada*/
+
+    /*GRADIENTE*/
+    background-image: linear-gradient(to bottom, #FFF, #f2f2f2);
+
+
+}
+
+.ac{
+    background-color:#fff;
+    width: 690px;
+    height: 200px;
+    padding-left: 10px;
+    margin-top: 20px;
+
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+
+    background-image: linear-gradient(to bottom, #FFF, #f2f2f2);
+    
+}
+
+.recados h1, .ac h1{
+    color: black;
+    font-size: 25px;
+    text-align: center;
+    font-family: 'open sans', sans-serif;
+}
+/*MURAL FIM*/
