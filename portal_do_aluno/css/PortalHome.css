@@ -1,6 +1,6 @@
 body{
     font-family: "open sans", open serif;
-    background-color: #ccc
+    background-color: #E6E6E6
 }
 
 .aga1{
@@ -13,6 +13,9 @@ body{
 .cabecalho{
     background-color: #008B8B;
     height: 80px;
+
+    background-image: linear-gradient(to bottom, #008B8B, #0B615E);
+
     
 }
 
@@ -56,7 +59,7 @@ ul.smartclass li {
 
 .smartclass{
     position: absolute;
-    background-color: #ccc;
+    background-color: #E6E6E6;
     width: 200px;
     height: 150px;
     margin-top: 195px;
@@ -72,7 +75,7 @@ ul.smartclass li {
 ul.navbar{
     margin-top: -10px;
     float: left;
-    background-color: #ccc;
+    background-color: #E6E6E6;
     width: 200px;
     height: 150px;
     margin-left: 20px;
@@ -114,7 +117,7 @@ ul.navbar li {
 
 /*MURAL INÍCIO*/
 .mural{
-    background-color: #ccc;
+    background-color: #E6E6E6;
     width: 700px;
     height: 450px;
     float: left;
@@ -128,6 +131,18 @@ ul.navbar li {
     height: 200px;
     padding-left: 10px;
 
+    /*Borda arredondada*/
+
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+
+    /*Fim borda arredondada*/
+
+    /*GRADIENTE*/
+    background-image: linear-gradient(to bottom, #FFF, #f2f2f2);
+
+
 }
 
 .ac{
@@ -136,6 +151,12 @@ ul.navbar li {
     height: 200px;
     padding-left: 10px;
     margin-top: 20px;
+
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+
+    background-image: linear-gradient(to bottom, #FFF, #f2f2f2);
     
 }
 
