@@ -1,3 +1,27 @@
+.login{
+    height: 200px;
+    width: 150px;
+    float: right;
+    background-color: #ccc;
+    margin-top: 20px;
+    margin-right: 20px;
+    background-image: linear-gradient(to bottom, #D8D8D8, #BDBDBD);
+    border: 1px solid #CDCDC1;
+}
+
+.sair, .botao1{
+    text-align: center;
+}
+
+.login img{
+    height: 130px;
+    width: 125px;
+    position: center;
+    padding-left: 12px;
+    padding-top: 12px;
+    
+}
+
 body{
     font-family: "open sans", open serif;
     background-color: #E6E6E6
