@@ -7,7 +7,7 @@
     background-color: #ccc;
     margin-top: 20px;
     margin-right: 20px;
-    background-image: linear-gradient(to bottom, #E0EEE0, #C1CDC1);
+    background-image: linear-gradient(to bottom, #D8D8D8, #BDBDBD);
     border: 1px solid #CDCDC1;
 }
 
@@ -16,12 +16,13 @@
 }
 
 .login img{
-    height: 140px;
-    width: 120px;
+    height: 130px;
+    width: 125px;
     position: center;
-    padding-left: 10px;
-    
+    padding-left: 12px;
+    padding-top: 12px;
 }
+
 
 .cabecalho{
     background-color: #008B8B;
@@ -59,47 +60,6 @@ body{
 }
 
 /* INÍCIO NAVBAR MENU */
-.smart{
-    font-family: fantasy;
-    font-size: 30px;
-    color: #03227a;
-    position: absolute;
-    margin-top: 140px;
-}
-
-.smartclass a{
-    color: #6E6E6E;
-}
-
-.smartclass a:link, a:visited, a:active{
-    text-decoration: none;
-}
-    
-.smartclass a:hover {
-	text-decoration: underline; 
-	color:#000;  
-    }
-
-ul.smartclass li {
-    list-style:none;	
-    display:inline;
-}
-
-.smartclass{
-    position: absolute;
-    background-color: #E6E6E6;
-    width: 200px;
-    height: 150px;
-    margin-top: 195px;
-    margin-left: 20px;
-    padding: 0px;
-    padding-right: 10px;
-    font-size: 18px;
-    text-align: left;
-    line-height: 30px;
-    color: white;
-}
-
 ul.navbar{
     margin-top: -10px;
     float: left;
@@ -140,7 +100,6 @@ ul.navbar li {
     }
     
 
-
 /*FIM NAVBAR*/
 
 /*MURAL INÍCIO*/
@@ -156,7 +115,7 @@ ul.navbar li {
 .recados{
     background-color:#fff;
     width: 690px;
-    height: 200px;
+    height: 400px;
     padding-left: 10px;
 
     /*Borda arredondada*/
@@ -171,21 +130,6 @@ ul.navbar li {
     background-image: linear-gradient(to bottom, #FFF, #f2f2f2);
 
 
-}
-
-.ac{
-    background-color:#fff;
-    width: 690px;
-    height: 200px;
-    padding-left: 10px;
-    margin-top: 20px;
-
-    -moz-border-radius:8px;
-    -webkit-border-radius:8px;
-    border-radius:8px;
-
-    background-image: linear-gradient(to bottom, #FFF, #f2f2f2);
-    
 }
 
 .recados h1, .ac h1{
