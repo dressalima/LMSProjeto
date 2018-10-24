@@ -16,6 +16,8 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from Faculdade.views import *
+from Aluno.views import *
+from Professor.views import *
 
 urlpatterns = [
     path('', index),
@@ -25,6 +27,9 @@ urlpatterns = [
 	path('noticia', noticia),
 	path('login/', login),
 	path('teste/', teste),
+	path('notas/', notas),
+	path('PortalHome/', PortalHome),
+	path('portalProfessor/',portalProfessor),
 	
 	
 ]
