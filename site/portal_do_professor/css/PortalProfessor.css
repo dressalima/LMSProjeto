@@ -62,7 +62,6 @@ body{
 /* INÍCIO NAVBAR MENU */
 .navbar{
     list-style:none; 
-    /*border:1px solid #c0c0c0;*/
     margin-top: -10px;
     float: left;
     background-color: #E6E6E6;
@@ -81,14 +80,7 @@ body{
 .navbar li {
 	position:relative; 
     float:left; 
-    /*border-right:1px solid #c0c0c0; */
     }
-    
-/*ul.submenu li a:hover{
-    color:royalblue;
-    display: hidden;
-}
-*/
 
 .navbar a{
     color: #6E6E6E;
