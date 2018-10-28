@@ -18,6 +18,7 @@ from django.urls import path
 from Faculdade.views import *
 from Aluno.views import *
 from Professor.views import *
+from Coordenador.views import*
 
 urlpatterns = [
     path('', index),
@@ -32,6 +33,7 @@ urlpatterns = [
 	path('portalProfessor/',portalProfessor),
 	path('contato/',contato),
 	path('sugestao/',sugestao),
+	path('portalCoordenador/', portalCoordenador)
 	
 	
 ]
