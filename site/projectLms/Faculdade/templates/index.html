@@ -1,5 +1,5 @@
 <!--ESTA É A PÁGINA PRINCIPAL DO PROJETO -->
-
+{% load static%}
 <!doctype html>
 <html>
 
@@ -8,12 +8,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Faculdade Solution</title>
-    <link rel="icon" type="image/png" sizes="32x32" href="../images/favicon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/../images/favicon.png' %}">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.1/css/bulma.min.css" />
-    <link rel="stylesheet" type="text/css" href="homepage.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/homepage.css' %}">
 </head>
 
 <body>
@@ -21,7 +21,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="navbar-brand">
-                <a class="navbar-item" href="index.html">
+                <a class="navbar-item" href="/indexl">
                         <img title= "Logo" src="https://i.pinimg.com/originals/45/eb/48/45eb486508643dc70631167fd3570014.png" alt="Faculdade Solution logo"> Faculdade Solution
                     </a>
                 <span class="navbar-burger burger" data-target="navbarMenu">
