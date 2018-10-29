@@ -1,12 +1,15 @@
+{% load static%}
+
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <title>Bem Vindo!</title>
-        <link rel="shortcut icon" href="icone.png" />
+        <link rel="shortcut icon" href="{% static 'img/icone.png'%}" />
     
-    <link rel="stylesheet" type="text/css" href="css/PortalHome.css" />
-    <link rel="stylesheet" type="text/css" href="css/contato.css" />
+    <link rel="stylesheet" type="text/css" href="{% staic 'css/PortalHome.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/contato.css' %}" />
+
 </head>
 
 <body style="margin: 0px">
@@ -16,18 +19,19 @@
     <div class="cabecalho">
 
         <div class="logo-faculdade">
-            <a href="PortalHome.html"> 
-                <img src="logo.png" alt="Faculdade Solution" title="Faculdade Solution">
+            <a href="/PortalHome"> 
+                <img src="{% static 'img/logo.png' %}" alt="Faculdade Solution" title="Faculdade Solution">
+                
             </a>
         </div>
             
     </div>
     
     <div class="login">
-        <img src="usuario.jpg" />
+        <img src="{% static  'img/usuario.jpg'%}" />
         <div class="botao1">Área do Aluno</div>
         <div class="sair">
-        <a href="C:\Users\1801037\Documents\LMSProjeto\site\faculdade\login.html">Sair</a>
+        <a href="/login">Sair</a>
         </div>
 
     </div>
@@ -44,19 +48,19 @@
     
                 <ul class="navbar">
     
-                    <li><a href="notas.html">Notas e Faltas</a></li>
+                    <li><a href="/notas">Notas e Faltas</a></li>
                     <hr style="margin: 0px;">
     
                     <li><a href="#nb">Documentação</a></li>
                     <hr style="margin: 0px;">
     
-                    <li><a href="contato.html">Contato dos Professores</a></li>
+                    <li><a href="/contato">Contato dos Professores</a></li>
                     <hr style="margin: 0px;">
     
                     <li><a href="#nd">Calendário Geral</a></li>
                     <hr style="margin: 0px;">
     
-                    <li><a href="sugestao.html">Reclame Aqui</a></li>
+                    <li><a href="/sugestao">Reclame Aqui</a></li>
                     <hr style="margin: 0px;">
     
                 </ul>

@@ -1,11 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <title>Bem Vindo!</title>
-        <link rel="shortcut icon" href="icone.png" />
+        <link rel="shortcut icon" href="{% static 'img/icone.png' %}" />
     
-    <link rel="stylesheet" type="text/css" href="css/PortalProfessor.css" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/PortalProfessor.css'%}" />
 </head>
 
 <body style="margin: 0px">
@@ -16,14 +17,14 @@
 
         <div class="logo-faculdade">
             <a href="/PortalHome"> 
-                <img src="logo.png" alt="Faculdade Solution" title="Faculdade Solution">
+                <img src="{% static 'img/logo.png' %}" alt="Faculdade Solution" title="Faculdade Solution">
             </a>
         </div>
             
     </div>
 
     <div class="login">
-        <img src="usuario.jpg" />
+        <img src="{% static 'img/usuario.jpg' %}" />
         <div class="botao1">Área do Professor</div>
         <div class="sair">
         <a href="/login">Sair</a>
