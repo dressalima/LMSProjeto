@@ -33,7 +33,10 @@ urlpatterns = [
 	path('portalProfessor/',portalProfessor),
 	path('contato/',contato),
 	path('sugestao/',sugestao),
-	path('portalCoordenador/', portalCoordenador)
-	
+	path('portalCoordenador/', portalCoordenador),
+	path('avisos/', avisos),
+	path('ementas/', ementas),
+	path('planoensino/', planoensino),
+	path('gruposalunos/', gruposalunos)
 	
 ]

@@ -1,0 +1,134 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Grupos de Alunos</title>
+        <link rel="shortcut icon" href="{% static 'img/icone.png' %}" />
+    
+    <link rel="stylesheet" type="text/css" href="{% static 'css/PortalCoordenador.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/gruposalunos.css' %}" />
+    <script type="text/javascript" src=""></script>
+</head>
+
+<body style="margin: 0px">
+
+    <header>
+    <!--CABECALHO-->
+    <div class="cabecalho">
+
+        <div class="logo-faculdade">
+            <a href="/PortalHome"> 
+                <img src="{% static 'img/logo.png' %}" alt="Faculdade Solution" title="Faculdade Solution">
+            </a>
+        </div>
+            
+    </div>
+
+    <div class="login">
+        <img src="{% static 'img/usuario.jpg' %}" />
+        <div class="botao1">Área do Coordenador</div>
+        <div class="sair">
+        <a href="">Sair</a>
+        </div>
+
+    </div>
+    
+    
+    <!--FIM CABECALHO-->
+    </header>
+
+    <!--SECTION-->
+    <section class="articles">
+
+        <div class="esquerdo">
+            <h1 class="aga1" style="margin-left: 20px;">Acesso <br> Rápido</h1>
+
+            <ul class="navbar">
+                    <li><a href="#">Secretaria Online</a><hr>
+                        <ul>
+                              <li><a href="#">Requerimentos</a><hr></li>
+                              <li><a href="">Calendário Geral</a><hr></li>
+                              <li><a href="#">Atualize seus dados<hr></a></li>                    
+                        </ul>
+                    </li></nav>
+            <li>
+            <li><a href="">Gestão das Disciplinas</a><hr>
+            <li><a href="">Atividades Contínuas</a><hr>
+            <li><a href="/ementas">Ementas</a><hr>
+            <a href="/planoensino">Planos de Ensino</a><hr>
+            <a href="/gruposalunos">Grupo de Alunos</a><hr>
+            <a href="/avisos">Avisos</a><hr> 
+            </li>
+        
+
+    </div>
+
+    <!--Onde ficará os grupos -->
+
+    <div class="div class="Grupos_Alunos>
+            <table style="width:80%">
+
+        <h1 class="aga1" style="margin-left: 500px;">Grupos de Alunos</h1>
+    
+        <form>
+            <input type="text" name="email" value="">
+            <input type="button" name="botao-ok" value="Ok">  
+    
+    
+        <div class="grupo">
+                   <div class="grupos_alunos">
+                
+                            <table style="width:80%">
+                                    </tr>
+                                    <tr>
+                                    </tr>
+                                    <tr>
+                                      <th>Grupos</th>
+                                      <th>Status</th> 
+                                      <th>Semestre</th>
+                                      <th>Curso</th>
+                                    </tr>
+                                    <tr>
+                                      <td >Grupo 1</td>
+                                      <td><center>Inativo</center></td> 
+                                      <td><center>1º Semestre</center></td>
+                                      <td><center>Análise e Desenvolvimento de Sistemas</center></td>
+                                    </tr>
+                                    <tr>
+                                      <td> Grupo 2</td>
+                                      <td><center>Ativo</center></td> 
+                                      <td><center>1º Semestre</center></td>
+                                      <td><center>Análise e Desenvolvimento de Sistemas</center></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Grupo 3</td>
+                                        <td><center>Ativo</center></td> 
+                                        <td><center>1º Semestre</center></td>
+                                        <td><center>Análise e Desenvolvimento de Sistemas</center></td>
+                                    </tr>
+                                    <tr>
+                                            <input type="button" name="botao-criar" value="Criar Grupo">
+                                            <input type="button" name="botao-excluir" value="Excluir">
+                                  </table>       
+                    
+                    </div>
+
+                
+            
+                <!-- MURAL DE RECADOS - FIM -->
+            
+            
+                        
+            
+                        
+                </section>
+            
+            </body>
+            </html>
+            
+
+
+    </div>         
+
