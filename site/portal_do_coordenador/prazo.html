@@ -1,0 +1,114 @@
+<!doctype html>
+   
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Alterar Prazo de Entrega</title>
+        <link rel="shortcut icon" href="icone.png" />
+    
+    <link rel="stylesheet" type="text/css" href="css/PortalCoordenador.css" /> 
+
+
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+
+    <script>
+        $(function() {
+            $("#calendario").datepicker({
+                dateFormat: 'dd/mm/yy',
+                dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'],
+                dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
+                dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
+                monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
+                monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
+            });
+        });
+        </script>
+
+
+</head>
+<body>
+    <body style="margin: 0px">
+
+        <header>
+        <!--CABECALHO-->
+        <div class="cabecalho">
+    
+            <div class="logo-faculdade">
+                <a href="PortalHome.html"> 
+                    <img src="logo.png" alt="Faculdade Solution" title="Faculdade Solution">
+                </a>
+            </div>
+                
+        </div>
+    
+        <div class="login">
+            <img src="usuario.jpg" />
+            <div class="botao1"><b>Área do Coordenador</b>
+                Nome: <br/> 
+            </div>
+            <div class="sair">
+            <a href="index.html">Sair</a>
+            </div>
+    
+        </div>
+    <!--FIM CABECALHO-->
+</header>
+
+<!--SECTION-->
+<section class="articles">
+
+    <div class="esquerdo">
+        <h1 class="aga1" style="margin-left: 20px";>Acesso <br> Rápido</h1>
+
+        <ul class="navbar">
+                <li><a href="#">Secretaria Online</a><hr>
+                    <ul>
+                          <li><a href="#">Requerimentos</a><hr></li>
+                          <li><a href="#">Calendário Geral</a><hr></li>
+                          <li><a href="#">Atualize seus dados<hr></a></li>                    
+                    </ul>
+                </li></nav>
+        <li>
+        <li><a href="gestao.html">Gestão de Disciplinas</a><hr>
+        <li><a href="gestalunos.html">Gestão de Alunos</a><hr>
+        <a href="gruposalunos.html">Grupos</a><hr>
+        <a href="avisos.html">Avisos</a><hr> 
+        </li>
+    
+
+</div>
+<div class="Prazo">
+    <div class="prazodta">
+        <h1 class="aga1" style="margin-left: 500px";>Alterar Prazo de Entrega</h1>
+    
+
+        <form> <b>Curso:</b><br/>
+            <input type="radio" name="graduacao" value=""> Administração
+            <input type="radio" name="graduacao" value=""> Análise e Desenvolvimento de Sistemas<br/>
+            <input type="radio" name="graduacao" value=""> Sistemas da Informação
+            <input type="radio" name="graduacao" value=""> Jogos Digitais 
+            <input type="radio" name="graduacao" value=""> Banco de Dados
+            <input type="radio" name="graduacao" value=""> Produção Multimídia
+        </form>
+        <form> <b>Semestre:</b><br/>
+            <input type="radio" name="semestre" value=""> 1° Semestre
+            <input type="radio" name="semestre" value=""> 2° Semestre
+            <input type="radio" name="semestre" value=""> 3° Semestre
+            <input type="radio" name="semestre" value=""> 4° Semestre 
+            <input type="radio" name="semestre" value=""> 5° Semestre
+            <input type="radio" name="semestre" value=""> 6° Semestre
+            <input type="radio" name="semestre" value=""> 7° Semestre
+            <input type="radio" name="semestre" value=""> 8° Semestre<br/>
+        <b>Nova data:</b> <input type="text" id="calendario"/>
+        <input type="button" name="botao-alter" value="Alterar" style="color: #FFFFFF; background-color: rgb(211, 152, 64)">
+        
+        
+        </form>
+
+
+
+</section>
+</body>
+</html>

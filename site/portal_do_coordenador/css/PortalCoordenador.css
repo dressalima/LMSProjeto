@@ -146,4 +146,22 @@ body{
     text-align: center;
     font-family: 'open sans', sans-serif;
 }
+
 /*MURAL FIM*/
+
+
+.avisos{
+    background-color:#fff;
+    width: 690px;
+    height: 400px;
+    padding-left: 10px;
+
+    /*Borda arredondada*/
+
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+
+    /*Fim borda arredondada*/
+
+}
