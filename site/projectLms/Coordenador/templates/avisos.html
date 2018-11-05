@@ -1,4 +1,5 @@
-{% load static %}
+ {% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,7 +7,7 @@
     <title>Portal do Coordenador</title>
         <link rel="shortcut icon" href="{% static 'img/icone.png' %}" />
     
-    <link rel="stylesheet" type="text/css" href="{% static 'css/PortalCoordenador.css' %}" />
+    <link rel="stylesheet" type="text/css" href="{% static  'css/PortalCoordenador.css' %}" />
 </head>
 
 <body style="margin: 0px">
@@ -16,8 +17,8 @@
     <div class="cabecalho">
 
         <div class="logo-faculdade">
-            <a href="/PortalHome"> 
-                <img src="{% static  'img/logo.png' %}" alt="Faculdade Solution" title="Faculdade Solution">
+            <a href="/portalCoordenador"> 
+                <img src="{% static 'img/logo.png' %}" alt="Faculdade Solution" title="Faculdade Solution">
             </a>
         </div>
             
@@ -40,7 +41,7 @@
     <section class="articles">
 
         <div class="esquerdo">
-            <h1 class="aga1" style="margin-left: 20px";>Acesso <br> Rápido</h1>
+            <h1 class="aga1" style="margin-left: 20px;">Acesso <br> Rápido</h1>
 
             <ul class="navbar">
                     <li><a href="#">Secretaria Online</a><hr>
@@ -51,8 +52,7 @@
                         </ul>
                     </li></nav>
             <li>
-            <li><a href="">Gestão das Disciplinas</a><hr>
-            <li><a href="">Atividades Contínuas</a><hr>
+            <li><a href="/gestao">Gestão das Disciplinas</a><hr>
             <li><a href="/ementas">Ementas</a><hr>
             <a href="/planoensino">Planos de Ensino</a><hr>
             <a href="/gruposalunos">Grupo de Alunos</a><hr>
@@ -65,7 +65,7 @@
     <!-- Caixa de avisos -->
     <div class="aviso">
         <div class="avisos_coordenador">
-            <h1 class="aga1" style="margin-left: 500px";>Avisos</h1>
+            <h1 class="aga1" style="margin-left: 500px;">Avisos</h1>
         Coordenador, insira aqui o seu aviso para publicação: <br/>
         
             <table background="hey.png" width="1000" height="200">
@@ -74,7 +74,9 @@
                     </textarea>
                     <br>
                     
-                    <input action="oi.html" type="submit" value="Publicar">
+                    <input action="pub.html" type="submit" value="Publicar"style="color: #FFFFFF; background-color: rgb(211, 152, 64)">
+                    <input type="button" name="botao-excluir" value="Excluir" style="color: #FFFFFF; background-color: rgb(211, 152, 64)">
+                    <input type="button" name="botao-rascunho" value="Salvar como Rascunho" style="color: #FFFFFF; background-color: rgb(211, 152, 64)">
                     </form>
                     </td>
                     </table>

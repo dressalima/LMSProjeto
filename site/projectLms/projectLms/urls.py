@@ -37,6 +37,10 @@ urlpatterns = [
 	path('avisos/', avisos),
 	path('ementas/', ementas),
 	path('planoensino/', planoensino),
-	path('gruposalunos/', gruposalunos)
+	path('gruposalunos/', gruposalunos),
+	path('gestao/', gestao),
+	path('lancamentos/', lancamentos),
+	path('planodeensinoPf/', planodeensinoPf),
+	path('avisosPf/', avisosPf)
 	
 ]
