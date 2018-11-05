@@ -8,7 +8,7 @@
         <link rel="shortcut icon" href="{% static 'img/icone.png' %}" />
     
     <link rel="stylesheet" type="text/css" href="{% static 'css/PortalCoordenador.css' %}" />
-    <link rel="stylesheet" type="text/css" href="{% static 'css/gruposalunos.css' %}" />
+    
     <script type="text/javascript" src=""></script>
 </head>
 
@@ -19,7 +19,7 @@
     <div class="cabecalho">
 
         <div class="logo-faculdade">
-            <a href="/PortalHome"> 
+            <a href="/portalCoordenador"> 
                 <img src="{% static 'img/logo.png' %}" alt="Faculdade Solution" title="Faculdade Solution">
             </a>
         </div>
@@ -54,8 +54,7 @@
                         </ul>
                     </li></nav>
             <li>
-            <li><a href="">Gestão das Disciplinas</a><hr>
-            <li><a href="">Atividades Contínuas</a><hr>
+            <li><a href="/gestao">Gestão das Disciplinas</a><hr>
             <li><a href="/ementas">Ementas</a><hr>
             <a href="/planoensino">Planos de Ensino</a><hr>
             <a href="/gruposalunos">Grupo de Alunos</a><hr>
@@ -71,10 +70,10 @@
             <table style="width:80%">
 
         <h1 class="aga1" style="margin-left: 500px;">Grupos de Alunos</h1>
-    
+    <br/><br/><br/>
         <form>
-            <input type="text" name="email" value="">
-            <input type="button" name="botao-ok" value="Ok">  
+            <input type="text" name="bancodedadosdosgrupos" value="">
+            <input type="button" name="botao-ok" value="Buscar" style="color: #FFFFFF; background-color: rgb(211, 152, 64)">  
     
     
         <div class="grupo">
@@ -109,15 +108,14 @@
                                         <td><center>Análise e Desenvolvimento de Sistemas</center></td>
                                     </tr>
                                     <tr>
-                                            <input type="button" name="botao-criar" value="Criar Grupo">
-                                            <input type="button" name="botao-excluir" value="Excluir">
+                                        <input type="button" name="botao-criar" value="Criar Grupo" style="color: #FFFFFF; background-color: rgb(211, 152, 64)">
+                                        <input type="button" name="botao-excluir" value="Excluir" style="color: #FFFFFF; background-color: rgb(211, 152, 64)">            
                                   </table>       
-                    
                     </div>
 
                 
             
-                <!-- MURAL DE RECADOS - FIM -->
+                <!-- Fim dos grupos-->
             
             
                         

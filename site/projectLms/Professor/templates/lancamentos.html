@@ -1,0 +1,129 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Lançamentos de Materiais
+    </title>
+        <link rel="shortcut icon" href="{% static 'img/icone.png' %}" /> 
+        <link rel="stylesheet" type="text/css" href="{% static 'css/PortalProfessor.css' %}" />
+</head>
+
+<body style="margin: 0px"
+    <header>
+    <!--CABECALHO-->
+    <div class="cabecalho">
+
+        <div class="logo-faculdade">
+            <a href="/portalProfessor"> 
+                <img src="{% static 'img/logo.png' %}" alt="Faculdade Solution" title="Faculdade Solution">
+            </a>
+        </div>
+            
+    </div>
+
+    <div class="login">
+        <img src="{% static 'img/usuario.jpg' %}" />
+        <div class="botao1">Área do Professor</div>
+        <div class="sair">
+        <a href="">Sair</a>
+        </div>
+
+    </div>
+    
+    
+    <!--FIM CABECALHO-->
+    </header>
+
+    <!--SECTION-->
+    <section class="articles">
+
+        <div class="esquerdo">
+            <h1 class="aga1" style="margin-left: 20px;">Acesso <br> Rápido</h1>
+
+            <ul class="navbar">
+                    <li><a href="#">Secretaria Online</a><hr>
+                        <ul>
+                              <li><a href="#">Notas e Faltas</a><hr></li>
+                              <li><a href="">Requerimentos</a><hr></li>
+                              <li><a href="#">Calendário Geral<hr></a></li>                    
+                        </ul>
+                    </li></nav>
+            <li>
+            <li><a href="">Atividades Contínuas</a><hr>
+            <li><a href="/lancamentos">Lançamentos</a><hr>
+            <a href="/planodeensinoPf">Planos de Ensino</a><hr>
+            <a href="/avisosPf">Avisos</a><hr>
+            <a href="">Chat</a><hr> 
+            </li>
+        
+
+    </div>
+
+    <!-- plano-->
+    <div class="lancamentos">
+            <div class="lanca">
+
+                <h1 class="aga1" style="margin-left: 500px;">Lançamentos de Materiais e Videos</h1>
+                </div>
+        </div><br/>
+                                <form>
+                                        <label>Curso:</label>
+                                        <select name="curso">
+                                            <option  value="ADS"> Análise e Desenvolvimento de Sistemas</option>
+                                            <option  value="GT"> Gestão da Tecnologia da Informação</option>
+                                            <option  value="SI"> Sistema da Informação</option>
+                                            <option  value="ADM"> Administração</option>
+                                            <option  value="EC"> Engenharia da Comptação</option>
+                                            <option  value="BD"> Banco de Dados</option>
+                                            <option  value="PM"> Produção Multimídia</option>
+                                            <option  value="JG"> Jogos Digitais</option>
+                                        </select>
+                                        <input type="button" name="botao-ok" value="Ok" style="color: #FFFFFF; background-color: rgb(37, 70, 160)">
+                                    </form>
+
+                                    <form>
+                                        <label>Turma:</label>
+                                        <select name="turma">
+                                                <option  value="JG"> 1º A</option>
+                                                <option  value="JG"> 1º B</option>
+                                                <option  value="JG"> 1º C</option>
+                                                <option  value="JG"> 2º A</option>
+                                                <option  value="JG"> 2º B</option>
+                                                <option  value="JG"> 2º C</option>
+                                                <option  value="JG"> 3º A</option>
+                                                <option  value="JG"> 3º B</option>
+                                                <option  value="JG"> 3º C</option>
+                                        </select>
+                                        <input type="button" name="botao-ok" value="Ok" style="color: #FFFFFF; background-color: rgb(37, 70, 160)">
+                                    </form><br/>
+
+                                    
+                                     <form>
+                                            <label>Período:</label><br/>
+                                            <input type="radio" value="Manhã" name="noite"/>Manhã
+                                            <input type="radio" value="Tarde" name="noite"/>Tarde
+                                            <input type="radio" value="Noite" name="noite"/>Noite
+                                            <input type="button" name="botao-ok" value="Ok" style="color: #FFFFFF; background-color: rgb(37, 70, 160)">
+                                    </form>
+        
+                                    <br/><br/>
+                                
+                                    <form><center>
+                                        <p><h4>Escolha os arquivos:</p></h4>
+                                        <input type=file style="color: #FFFFFF; background-color: rgb(37, 70, 160)"><br/><br/>
+                                        <input type="button" name="botao-ok" value="Enviar" style="color: #FFFFFF; background-color: rgb(37, 70, 160)">
+                                    </form>
+                                </center>
+    
+                                  
+    
+    
+        
+    <!-- Fim do plano-->
+            
+    </section>
+
+</body>
+</html>

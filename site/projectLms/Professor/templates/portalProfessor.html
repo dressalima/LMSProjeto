@@ -1,4 +1,5 @@
 {% load static %}
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -16,7 +17,7 @@
     <div class="cabecalho">
 
         <div class="logo-faculdade">
-            <a href="/PortalHome"> 
+            <a href="/portalProfessor"> 
                 <img src="{% static 'img/logo.png' %}" alt="Faculdade Solution" title="Faculdade Solution">
             </a>
         </div>
@@ -40,21 +41,21 @@
     <section class="articles">
 
         <div class="esquerdo">
-            <h1 class="aga1" style="margin-left: 20px";>Acesso <br> Rápido</h1>
+            <h1 class="aga1" style="margin-left: 20px;">Acesso <br> Rápido</h1>
 
             <ul class="navbar">
                     <li><a href="#">Secretaria Online</a><hr>
                         <ul>
                               <li><a href="#">Notas e Faltas</a><hr></li>
                               <li><a href="#">Requerimentos</a><hr></li>
-                              <li><a href="#">Calendrário Geral<hr></a></li>                    
+                              <li><a href="#">Calendário Geral<hr></a></li>                    
                         </ul>
-                    </li>
+                    </li></nav>
 
                 <li><a href="#na">Atividades Contínuas</a><hr></li>
-                <li><a href="#nb">Lançamentos</a><hr></li>
-                <li><a href="#nc">Plano de Ensino</a><hr></li>            
-                <li><a href="#nd">Avisos</a><hr></li>
+                <li><a href="/lancamentos">Lançamentos</a><hr></li>
+                <li><a href="/planodeensinoPf">Plano de Ensino</a><hr></li>            
+                <li><a href="/avisosPf">Avisos</a><hr></li>
                 <li><a href="#nd">Chat</a><hr></li>
                 
 

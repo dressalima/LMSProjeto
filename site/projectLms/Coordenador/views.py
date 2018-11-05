@@ -14,3 +14,7 @@ def gruposalunos(request):
 
 def planoensino(request):
     return render(request, 'planoensino.html')
+
+
+def gestao(request):
+    return render(request, 'gestao.html')

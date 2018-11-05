@@ -1,13 +1,13 @@
-{% load static %}
+{% load static%}
 
 <!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
     <title>Portal do Coordenador</title>
-        <link rel="shortcut icon" href="{% static 'img/icone.png' %}" />
+        <link rel="shortcut icon" href="{% static  'img/icone.png' %}" />
     
-    <link rel="stylesheet" type="text/css" href="{% static 'css/PortalCoordenador.css'%} " />
+    <link rel="stylesheet" type="text/css" href="{% static 'css/PortalCoordenador.css' %}" />
 </head>
 
 <body style="margin: 0px">
@@ -17,7 +17,7 @@
     <div class="cabecalho">
 
         <div class="logo-faculdade">
-            <a href="/PortalHome"> 
+            <a href="/portalCoordenador"> 
                 <img src="{% static 'img/logo.png' %}" alt="Faculdade Solution" title="Faculdade Solution">
             </a>
         </div>
@@ -47,13 +47,12 @@
                     <li><a href="#">Secretaria Online</a><hr>
                         <ul>
                               <li><a href="#">Requerimentos</a><hr></li>
-                              <li><a href="#">Calendário Geral</a><hr></li>
+                              <li><a href="">Calendário Geral</a><hr></li>
                               <li><a href="#">Atualize seus dados<hr></a></li>                    
                         </ul>
                     </li></nav>
             <li>
-            <li><a href="">Gestão das Disciplinas</a><hr>
-            <li><a href="">Atividades Contínuas</a><hr>
+            <li><a href="/gestao">Gestão das Disciplinas</a><hr>
             <li><a href="/ementas">Ementas</a><hr>
             <a href="/planoensino">Planos de Ensino</a><hr>
             <a href="/gruposalunos">Grupo de Alunos</a><hr>
@@ -66,7 +65,7 @@
     <!-- MURAL DE RECADOS - INÍCIO -->
     <div class="mural">
         <div class="recados">
-            <h1 class="aga1" style="margin-left: 20px";>Mural de Recados</h1>
+            <h1 class="aga1" style="margin-left: 20px;">Mural de Recados</h1>
             Recados:</div>
     </div>
     <!-- MURAL DE RECADOS - FIM -->

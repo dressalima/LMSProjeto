@@ -4,8 +4,8 @@
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>Plano de Ensino</title>
-        <link rel="shortcut icon" href="{% static 'img/icone.png' %}" /> 
+    <title>Gestão das Disciplinas</title>
+        <link rel="shortcut icon" href="{% static 'img/icone.png' %}" />
         <link rel="stylesheet" type="text/css" href="{% static 'css/PortalCoordenador.css' %}" />
 </head>
 
@@ -17,7 +17,7 @@
 
         <div class="logo-faculdade">
             <a href="/portalCoordenador"> 
-                <img src="{% static 'img/logo.png' %}" alt="Faculdade Solution" title="Faculdade Solution">
+                <img src="{% static  'img/logo.png' %} " alt="Faculdade Solution" title="Faculdade Solution">
             </a>
         </div>
             
@@ -40,13 +40,13 @@
     <section class="articles">
 
         <div class="esquerdo">
-            <h1 class="aga1" style="margin-left: 20px;">Acesso <br> Rápido</h1>
+            <h1 class="aga1" style="margin-left: 20px";>Acesso <br> Rápido</h1>
 
             <ul class="navbar">
                     <li><a href="#">Secretaria Online</a><hr>
                         <ul>
                               <li><a href="#">Requerimentos</a><hr></li>
-                              <li><a href="">Calendário Geral</a><hr></li>
+                              <li><a href="#">Calendário Geral</a><hr></li>
                               <li><a href="#">Atualize seus dados<hr></a></li>                    
                         </ul>
                     </li></nav>
@@ -57,28 +57,28 @@
             <a href="/gruposalunos">Grupo de Alunos</a><hr>
             <a href="/avisos">Avisos</a><hr> 
             </li>
-        
+
 
     </div>
 
-    <!-- plano-->
-    <div class="planoensino">
-            <div class="plano">
-                <h1 class="aga1" style="margin-left: 500px;">Plano de Ensino</h1>
-                </div>
+    <!-- Gestão - INÍCIO -->
+    <div class="gestao">
+        <div class="gestadisc">
+            <h1 class="aga1" style="margin-left: 500px;">Gestão de Disciplinas</h1><br/><br/>
+            <input type="button" name="botao-criar" value="Criar uma disciplina" style="color: #FFFFFF; background-color: rgb(211, 152, 64)"> 
+            <input type="button" name="botao-alterar" value="Alterar uma disciplina" style="color: #FFFFFF; background-color:rgb(211, 152, 64)">
+            <input type="button" name="botao-aprovar" value="Aprovar uma disciplina" style="color: #FFFFFF; background-color: rgb(211, 152, 64)"></div><br/><br/>
+            <input type="button" name="botao-instancia" value="Criação de nova instância"style="color: #FFFFFF; background-color: rgb(211, 152, 64)">
+            <input type="button" name="botao-transf" value="Transferir disciplina"  style="color: #FFFFFF; background-color:rgb(211, 152, 64)">
+            <input type="button" name="botao-prazo" value="Alterar prazo de entrega" style="color: #FFFFFF; background-color: rgb(211, 152, 64)">
+
+
         </div>
-                                   <form>
-                                        <input type="text" name="procurecurso" value="Procure o curso" style="color: rgb(0, 0, 0); background-color: rgb(255, 253, 250)">
-                                        <input type="button" name="botao-ok" value="Ir" style="color: #FFFFFF; background-color: rgb(211, 152, 64)">
-                                    </form>
-    
-        <p>Análise e Desenvolvimento de Sistemas</p>
-    
-        <input type=file style="color: #FFFFFF; background-color: rgb(211, 152, 64)">
-    
-    
-        
-    <!-- Fim do plano-->
+    <!-- Gestão - FIM -->
+
+
+            
+
             
     </section>
 
