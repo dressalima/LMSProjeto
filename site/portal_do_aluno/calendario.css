@@ -1,0 +1,19 @@
+body img{
+    width: 690px;
+    height: 932px;
+ }
+
+.recados1{
+    background-color:#fff;
+    width: 690px;
+    height: 1000px;
+    padding-left: 10px;
+
+    /*Borda arredondada*/
+
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;
+    border-radius:8px;
+
+    /*Fim borda arredondada*/
+}
